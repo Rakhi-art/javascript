@@ -1,0 +1,68 @@
+<script>
+    // creating an object
+    let person={
+        name: "rakhi",
+        age: 18 ,
+        city: "jalandhar"
+    };
+    console.log("1. object created:");
+    console.log(person);
+    document.write("1. object created:"+person +"<br>");
+
+
+    //accessing object properties
+    console.log("\n 2.accessing properties:");
+    console.log("name",person.name);
+    console.log("city",person["city"]);
+
+
+    // adding a new property
+    person.country="india";
+    console.log("\n 3.adding a new property 'country':",person);
+
+
+    //updating a property
+    person.age=26;
+    console.log("\n 4.updating a new property 'age':",person);
+
+
+    // deleting a property
+    delete person.city;
+    console.log("\n 5.after deleting a new property 'city':",person);
+
+
+    // defining an object with a method
+    let student={
+        name: "raj",
+        marks: 85,
+        displayInfo: function(){
+            return this.name + " "+ "scored" +" " +this.marks +" "+"marks.";
+        }
+    };
+    console.log("\n 6.object with method:");
+    console.log(student.displayInfo());
+
+
+    //nested objects
+    let employee={
+        name: "priya",
+        department:{
+            name:"it",
+            location:"building 3"
+        }
+    };
+    console.log("\n 7. nested object:");
+    console.log("department name:",employee.department.name);
+    console.log("department location",employee.department.location);
+
+
+    //looping through object properties
+    console.log("\n 8. looping through object properties: ");
+    for(let key in person){
+        console.log(key+ ":" +person[key]);
+        document.write(key+ ":" +person[key] +"<br>");
+       
+    };
+
+    //
+</script>

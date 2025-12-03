@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <!-- to link script file -->
+    <script src="script.js"></script>
+    <!--  -->
+    <script>
+        function showMessage() {
+            alert("hello, this message comes from head section");
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Click the button below</h2>
+    <button onclick="showMessage()">Click </button>
+    <h1>click </h1>
+
+    <!-- This writes “Hello, world!” directly onto the web page. -->
+    <script>
+        document.write("hello, this message comes from head section");
+    </script>
+
+
+    <h2 id="text">Welcome!</h2>
+    <script>
+        document.getElementById("text").style.color = "blue";
+    </script>
+
+
+    <!-- external to link script file -->
+    <h2>click on the button below:</h2>
+    <button onclick="show()">Click on the button</button>
+    <p id="me"></p>
+
+
+    <!-- VARIABLES IN JAVA SCRIPT -->
+
+
+
+    <script>
+
+        var name = "rakhi"; //using vaer
+        let age = 18;   //using let
+        const country = "india"; //using const
+        console.log("name:" + name);
+        console.log("age" + age);
+        console.log("country:" + country);
+
+        document.write("age: " + age + "<br>");
+        document.write("age: " + age + "<br>");
+        document.write("country: " + country + "<br>");
+
+        let a=14,b=3;
+        document.write("THE SUM IS: " +(a+b));
+        console.log(a+b); //15
+        console.log(a-b); //5
+        console.log(a*b); //50
+        console.log(a/b); //2
+        console.log(a%b);
+    
+        let x=4,y=12;
+        document.write("THE SUM IS: " +(x==y) + "<br>");
+        document.write("THE SUM IS: " +(x!=y) + "<br>");
+        document.write("THE SUM IS: " +(x===y) + "<br>");
+
+
+        let firstName="John";
+        let lastName="Doe";
+        let FullName=firstName+" "+lastName;
+        document.write((FullName)+"<br>")
+
+        let marks=25
+        if(marks>=50){
+            console.log("you passed!");
+            document.write("you passed!"+"<br>");
+        }else{
+            console.log("you are not passed!");
+            document.write("you are not passed!" +"<br>");
+        }
+        
+        let z=25,w=45;
+        if(z==w){
+            document.write((z==w) +"<br>");
+
+        }else if(z!=w){
+            document.write((z!=w)+"<br>");
+        }else if(z===w){
+            document.write((z===w) +"<br>");
+        }
+
+        let day=3;
+        switch(day){
+            case 1:
+                document.write("monday" +"<br>");
+                break;
+            case 2:
+                document.write("tuesday" +"<br>");
+                break;
+            case 3:
+                document.write("wednesday" +"<br>");
+                break;
+            case 4:
+                document.write("thuesday" +"<br>");
+                break;
+            case 5:
+                document.write("friday" +"<br>");
+                break;
+            case 6:
+                document.write("saturday" +"<br>");
+                break;
+            case 7:
+                document.write("sunday" +"<br>");
+                break;
+        }
+        
+    
+
+    </script>
+</body>
+<script>
+    let element = document.getElementById("text");
+    element.innerHTML = "Changed text!";
+</script>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<SCript>
+    function singleclick(){
+        document.getElementById("mouse-msg").innerHTML="Single Click deteced!";
+    }
+     function doubleclick(){
+        document.getElementById("mouse-msg").innerHTML="Double Click deteced!";
+    }
+     function mouseover(){
+        document.getElementById("mouse-msg").innerHTML="Mouse Over Element!";
+    }
+    function mouseout(){
+        document.getElementById("mouse-msg").innerHTML="Mouse Left Element!"
+    }
+
+</SCript>
+<body>
+    <h1>Mouse Based Events</h1>
+    <div style="width: 300px;height: 150px;background: wheat;border: 2px solid black;"
+    onclick="singleclick()"
+    ondblclick="doubleclick()"
+    onmouseover="mouseover()"
+    onmouseout="mouseout()"
+    onmousemove="mouseover()">
+    <p>move / click inside this box</p>
+    </div>
+    <p id="mouse-msg" style="color:aqua;font-weight: bold;"></p>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function keydownevent(){
+        document.getElementById("key-status").innerHTML="key down!";
+    }
+    function keyupevent(){
+        document.getElementById("key-status").innerHTML="key up!";
+    }
+    function keypressevent(event){
+        document.getElementById("key-char").innerHTML="you presses:" + event.key;
+    }
+</script>
+<body>
+    <h2>
+        Keyboard Based Events
+    </h2>
+    <input type="text"
+    onkeydown="keydownevent()"
+    onkeyup="keyupevent()"
+    onkeypress="keypressevent(event)"
+    placeholder="press any key">
+    <p id="key-status" style="color: aquamarine;font-weight:bold"></p>
+    <p id="key-char" style="color:red;font-weight: bold;"></p>
+    
+</body>
+</html>

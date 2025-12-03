@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<script>
+    function data(event) {
+        event.preventDefault(); // Stops form from refreshing
+
+        var a = document.getElementById("name").value.trim();
+        var b = document.getElementById("phoneno").value.trim();
+        var passwords = document.getElementsByClassName("password");
+
+        var c = passwords[0].value.trim();
+        var d = passwords[1].value.trim();
+
+        if (a === "" || b === "" || c === "" || d === "") {
+            alert("All fields are mandatory");
+            return false;
+        }
+
+        if (c !== d) {
+            alert("Passwords do not match!");
+            return false;
+        }
+
+        alert("Successfully submitted!");
+        return true;
+    }
+</script>
+
+    <form onsubmit="data(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+        <br><br>
+
+        <label for="phoneno">Contact:</label>
+        <input type="text" id="phoneno">
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" class="password">
+        <br><br>
+
+        <label for="password">Confirm Password:</label>
+        <input type="password" class="password">
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+
+</html>

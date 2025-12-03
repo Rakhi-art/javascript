@@ -1,0 +1,104 @@
+<!-- unit 5  JavaScript Functions,Events and Validation -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // form based
+        function focusField(){
+            document.getElementById("msg").innerHTML="Input feild selected!";
+        }
+        function blurField(){
+            document.getElementById("msg").innerHTML="You left ths input feild!";
+
+        }
+          function valueChange(){
+            document.getElementById("msg").innerHTML="value change";
+
+        }
+          function submitForm(event){
+            event.preventDefault();// stops actual form submit
+            document.getElementById("msg").innerHTML="Form submitted successfully!";
+        }
+
+
+    </script>
+ </head>
+ <body>
+    <h1>
+        form based events
+    </h1>
+    <form onsubmit="submitForm(event)">
+        <input type="text"
+        onfocus="focusField()"
+        onblur="blurField()"
+        onchange="valueChanged()"
+        placeholder="Type somethiong">
+        <br><br>
+        <button type="submit">Submit</button>
+
+    </form>
+    <p id="msg" style="color:red"></p>
+ </body>
+  </html>
+  <script>
+        // function declaration(name function)-return and calling function
+        function greet(){
+            console.log("Hello!");
+            document.write("hello!"+"<br>");
+
+        };
+        greet();
+         function greet1(){
+            let x=15, y=10;
+            document.write(x+y +"<br>")
+        };
+        greet1();
+        let add=function(a,b){
+            return a+b;
+        };
+        console.log(add(5,6));
+        document.write(add(3,4));
+
+       
+
+        // arrow function 
+        const multiply= (a,b)=>a*b;
+        document.write(multiply(4,5)+"<br>");
+
+
+        //using function arguments
+        function wel(name){
+            document.write("Hello," +" " +name+"<br>");
+        }
+        wel("Rakhi")
+
+
+        function student(name,score){
+            document.write("Hello, my name"+" "+name,+" "+"my scored is "+" "+score+"<br>" )
+        }
+        student("Rakhi",20)
+
+        //return statement
+        function adding(x,y){
+            return x+y;
+        }
+        let result=adding(2,3);
+        document.write(result);
+
+
+        //  Working with JavaScript Events like Form Based
+
+        //1 form basesd Events
+        
+//         1️⃣ Common Form Events
+// Event	When It Fires	Example Use
+// onSubmit	When a form is submitted	Validate before sending data
+// onReset	When a form is reset	Confirm before clearing
+// onFocus	When input gains focus	Highlight input field
+// onBlur	When input loses focus	Validate field on leaving
+// onChange	When input value changes (after focus lost)	Validate dropdown/text input
+// onInput	While user types	Live search, live validation
+</script>

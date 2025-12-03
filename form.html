@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function data(){
+        var a = document.getElementById("name").value;
+        var b = document.getElementById("phoneno.").value;
+        var c = document.getElementsByid("password").value;
+        var d = document.getElementsByid("password1").value;
+        if (a == " " || b == " " || c == " " || d == " ") {
+            alert("All feilds are mendatory");
+        };
+    }
+</script>
+
+<body>
+    <form onsubmit="data()">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+        <br><br>
+        <label for="number">Contact:</label>
+        <input type="text" name="number" id="phoneno.">
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password">
+        <br><br>
+        <label for="password"> Confirm password:</label>
+        <input type="password" name="password" id="password1">
+        <br><br>
+        <input type="submit" value="successfully submitted">
+    </form>
+
+</body>
+
+</html>

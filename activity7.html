@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Table</title>
+    <style>
+        /* General Page Setup */
+        body {
+            font-family: "Times New Roman", Times, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        /* The Main Outer Container (Rounded Dotted Border) */
+        .main-container {
+            border: 3px dotted #555;
+            border-radius: 30px;
+            padding: 20px;
+            background-color: white;
+            width: fit-content;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* The Title Box ("Marks table") */
+        .title-box {
+            border: 2px solid #333;
+            border-radius: 15px;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 15px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .title-box h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* The Wrapper around the specific table data (Inner Dotted Border) */
+        .table-wrapper {
+            border: 3px dotted #555;
+            padding: 15px;
+        }
+
+        /* Table Styling */
+        table {
+            border-collapse: separate;
+            border-spacing: 2px; /* Slight gap to match the header boxes */
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Header Cells Styling */
+        th {
+            border: 2px solid #333; /* Box around header text */
+            padding: 12px 20px;
+            font-weight: bold;
+            font-size: 16px;
+            color: #444;
+        }
+
+        /* Data Cells Styling */
+        td {
+            padding: 12px 20px;
+            border-bottom: 1px solid #333; /* Horizontal divider */
+            font-size: 16px;
+        }
+
+        /* The "Double" Vertical Lines */
+        /* We apply a double border to the right of the first 3 columns */
+        td:not(:last-child) {
+            border-right: 4px double #333;
+        }
+
+        /* Remove bottom border for the last row to look cleaner */
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <div class="title-box">
+            <h1>Marks table</h1>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>student</th>
+                        <th>Maths</th>
+                        <th>Physics</th>
+                        <th>Computer<br>Science</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>54</td>
+                        <td>32</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>54</td>
+                        <td>32</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>54</td>
+                        <td>32</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>54</td>
+                        <td>32</td>
+                        <td>23</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+</html>

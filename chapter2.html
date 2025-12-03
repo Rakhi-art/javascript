@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // while loop
+        let i=1;
+        while (i<=5){
+            console.log("count:"+i);
+            document.write("count:" +i +"<br>");
+            i++;//increment to aviod infinite loop
+        }
+        // do while 
+        let j=1;
+        do{
+            console.log("number:" +j);
+            document.write("num:" +j +"<br>")
+            j++;
+        }while(j<=5);
+        // for while
+        for(let i=1; i<=3;i++){
+            for(let j=1; j<=2; j++){
+                console.log("i="+i+",j="+j);
+                document.write("i="+i+",j="+j +"<br>");
+            }
+        }
+        //popup box
+        // 1> alert Box
+        // 2> confirm Box
+        // 3>prompt box
+
+        // confirm box
+        let response=confirm("Do you want to delete this file?");
+        if (response){
+            alert("file deleted successfully!");
+        }else{
+            alert("action canceled!");
+        }
+
+        //prompt box
+        let n=prompt("Please enter your name");
+        if (n){
+            alert("hello" +" " +n+"! welcome to javescript.");
+        }else{
+            alert("you didn't eneter your name.");
+        }
+        //accessing object properties
+       // a> dot Notation
+       //adding and deleting properties 
+    // creating an object
+    let person={
+        name: "rakhi",
+        age: 18 ,
+        city: "jalandhar"
+    };
+    console.log("1. object created:");
+    console.log(person);
+    document.write("1. object created:"+person +"<br>");
+    //accessing object properties
+    console.log("\n 2.accessing properties:");
+    console.log("name",person.name);
+    console.log("city",person["city"]);
+    // adding a new property
+    person.country="india";
+    console.log("\n 3.adding a new property 'country':",person);
+    //updating a property
+    person.age=26;
+    console.log("\n 4.updating a new property 'age':",person);
+    // deleting a property
+    delete person.city;
+    console.log("\n 5.after deleting a new property 'city':",person);
+    // defining an object with a method
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Registration Form</h1>
+
+    <form action="#" onsubmit="return validateform()">
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+        <div class="error" id="nameError"></div><br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email">
+        <div class="error" id="emailError"></div><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password">
+        <div class="error" id="passError"></div><br>
+
+        <label for="Confirmpassword">Confirm Password:</label>
+        <input type="password" id="Confirmpassword">
+        <div class="error" id="confirmPassError"></div><br>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone">
+        <div class="error" id="phoneError"></div>
+        <br>
+        <button type="submit">Register</button><br>
+    </form>
+
+    <script>
+        function validateform() {
+            // Clear previous error messages
+            document.getElementById("nameError").innerHTML = "";
+            document.getElementById("emailError").innerHTML = "";
+            document.getElementById("passError").innerHTML = "";
+            document.getElementById("confirmPassError").innerHTML = "";
+            document.getElementById("phoneError").innerHTML = "";
+
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let password = document.getElementById("password").value.trim();
+            let Confirmpassword = document.getElementById("Confirmpassword").value.trim();
+            let phone = document.getElementById("phone").value.trim();
+
+            let isValid = true;
+
+            // Validate Name
+            if (name === "") {
+                document.getElementById("nameError").innerHTML = "Name cannot be empty";
+                isValid = false;
+            } else {
+                let namePattern = /^[A-Za-z\s]+$/;
+                if (!name.match(namePattern)) {
+                    document.getElementById("nameError").innerHTML = "Name should contain only alphabets and spaces";
+                    isValid = false;
+                }
+            }
+
+            // Validate Email
+            let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!email.match(emailPattern)) {
+                document.getElementById("emailError").innerHTML = "Enter a valid email";
+                isValid = false;
+            }
+
+            // Validate Password
+            if (password.length < 6) {
+                document.getElementById("passError").innerHTML = "Password must be at least 6 characters";
+                isValid = false;
+            }
+
+            // Confirm Password
+            if (password !== Confirmpassword) {
+                document.getElementById("confirmPassError").innerHTML = "Passwords do not match";
+                isValid = false;
+            }
+
+            // Validate Phone (10 digits only)
+            let phonePattern = /^[0-9]{10}$/;
+            if (!phone.match(phonePattern)) {
+                document.getElementById("phoneError").innerHTML = "Phone must be 10 digits";
+                isValid = false;
+            }
+
+            return isValid; // Return the overall validation result
+        }
+    </script>
+</body>
+
+</html>
